@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>foccccccccc</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages>heloooo</messages>
+        <name>NeedItRequest Type Options</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    var requestTypeField = g_form.getControl('u_request_type');
+    var whatNeededField = g_form.getControl('u_what_needed');
+
+    if (whatNeededField) {
+        clearChoices('u_what_needed');
+
+        var requestType = g_form.getValue('u_request_type');
+			console.log("requestType: ", requestType);
+		
+        populateWhatNeededChoices(requestType);
+    }
+
+}
+
+function clearChoices(fieldName) {
+    var selectElement = g_form.getControl(fieldName);
+    if (selectElement){
+        while (selectElement.options.length > 0){
+            selectElement.remove(0);
+        }
+    }
+}
+
+function populateWhatNeededChoices(requestType){
+    var whatNeededField = g_form.getControl('u_what_needed');
+	
+    if (whatNeededField) {
+        if (requestType === 'hr') {
+            g_form.addOption('u_what_needed', 'human_resources 1', 'Human Resources 1');
+            g_form.addOption('u_what_needed', 'human_resources 2', 'Human Resources 2');
+            g_form.addOption('u_what_needed', 'other', 'Other');
+        } 
+		else if (requestType === 'facilities') {
+            g_form.addOption('u_what_needed', 'facilities 1', 'Facilities 1');
+            g_form.addOption('u_what_needed', 'facilities 2', 'Facilities 2');
+            g_form.addOption('u_what_needed', 'other', 'Other');
+        } 
+		else {
+            g_form.addOption('u_what_needed', 'legal 1', 'Legal 1');
+            g_form.addOption('u_what_needed', 'legal 2', 'Legal 2');
+            g_form.addOption('u_what_needed', 'other', 'Other');
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-27 07:01:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f2408947970631106742337e6253af55</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>NeedItRequest Type Options</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_client_f2408947970631106742337e6253af55</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-27 07:39:37</sys_updated_on>
+        <table>x_58872_needit_needit</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>2a71b365db287f009df22f17d49619c4</instance_id>
+        <instance_name>dev78227</instance_name>
+        <name>sys_script_client_f2408947970631106742337e6253af55</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;foccccccccc&lt;/description&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages&gt;heloooo&lt;/messages&gt;&lt;name&gt;NeedItRequest Type Options&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    var requestTypeField = g_form.getControl('u_request_type');
+    var whatNeededField = g_form.getControl('u_what_needed');
+
+    if (whatNeededField) {
+        clearChoices('u_what_needed');
+
+        var requestType = g_form.getValue('u_request_type');
+			console.log("requestType: ", requestType);
+		
+        populateWhatNeededChoices(requestType);
+    }
+
+}
+
+function clearChoices(fieldName) {
+    var selectElement = g_form.getControl(fieldName);
+    if (selectElement){
+        while (selectElement.options.length &gt; 0){
+            selectElement.remove(0);
+        }
+    }
+}
+
+function populateWhatNeededChoices(requestType){
+    var whatNeededField = g_form.getControl('u_what_needed');
+	
+    if (whatNeededField) {
+        if (requestType === 'hr') {
+            g_form.addOption('u_what_needed', 'human_resources 1', 'Human Resources 1');
+            g_form.addOption('u_what_needed', 'human_resources 2', 'Human Resources 2');
+            g_form.addOption('u_what_needed', 'other', 'Other');
+        } 
+		else if (requestType === 'facilities') {
+            g_form.addOption('u_what_needed', 'facilities 1', 'Facilities 1');
+            g_form.addOption('u_what_needed', 'facilities 2', 'Facilities 2');
+            g_form.addOption('u_what_needed', 'other', 'Other');
+        } 
+		else {
+            g_form.addOption('u_what_needed', 'legal 1', 'Legal 1');
+            g_form.addOption('u_what_needed', 'legal 2', 'Legal 2');
+            g_form.addOption('u_what_needed', 'other', 'Other');
+        }
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-10-27 07:01:07&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;f2408947970631106742337e6253af55&lt;/sys_id&gt;&lt;sys_mod_count&gt;16&lt;/sys_mod_count&gt;&lt;sys_name&gt;NeedItRequest Type Options&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_f2408947970631106742337e6253af55&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-10-27 07:39:37&lt;/sys_updated_on&gt;&lt;table&gt;x_58872_needit_needit&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2136991405</payload_hash>
+        <record_name>NeedItRequest Type Options</record_name>
+        <reverted_from/>
+        <source>ac2ee4c397c231106742337e6253afbd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-27 07:39:37</sys_created_on>
+        <sys_id>d6dc89c3974631106742337e6253af2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b701309a20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-27 07:39:37</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>dedc89c3cf4631103b45b4fa79b1832e</update_guid>
+        <update_guid_history>dedc89c3cf4631103b45b4fa79b1832e:2136991405,0e2bc14333463110cb8204daa28c4161:1709579368,9b1b8903cd46311081f7f7aae1d004aa:-231017496,b51b41439e46311096170177afbe43e0:2012315403,eb8ac5cf5c06311056e7971c125d8af2:-1334132758,222a8d8f9d063110bbc51a4403ee2863:408331237,d7e9c1cfb3063110aff3eaeedb54ae47:1569389496,fed9cd0f9c063110a5d329f3bd235104:-1911845931,96b9054f1206311092784c78c0abd226:1569389496,cc08090fe406311018c51c7da13cd94c:967658057,61c7014f3c063110c88143f51b45fb7e:-47488349,e767890f4b063110baf7424d181c4308:364924489,f7e6c10f30063110df1efdc7575beeeb:205411270,bad5c18b7f0631107b2c7b58875aca54:1713604316,86e4c58bc60631105670f2ac4a6694f8:-430847555,be94894b71063110afdb1a307047b418:1658371485,5a040d072b063110ab6c20173deeb96b:2085966237</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-27 07:42:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>ab16753d928b40e28ab73fd081bf2669</sys_id>
+        <sys_metadata>f2408947970631106742337e6253af55</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NeedItRequest Type Options</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="NeedIt">2bcee00797c231106742337e6253af4f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_client_f2408947970631106742337e6253af55</sys_update_name>
+        <sys_update_version display_value="sys_script_client_f2408947970631106742337e6253af55">d6dc89c3974631106742337e6253af2f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-27 07:42:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
